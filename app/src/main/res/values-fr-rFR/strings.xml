@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="title_home">Acceuil</string>
+    <string name="press_nfc">Appuyez pour partager votre carte</string>
+    <string name="title_dashboard">Tableau de bord</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_contact">Repertoire</string>
+    <string name="title_card">Mes cartes</string>
+    <string name="first_name">Prenom</string>
+    <string name="last_name">Nom</string>
+    <string name="company_name">Entreprise</string>
+    <string name="job_position">Poste</string>
+    <string name="phone_number">Numero de telephone</string>
+    <string name="email">Email</string>
+    <string name="company_address">Adresse de l\'entreprise</string>
+    <string name="no_card_available">Repertoire de cartes vide</string>
+</resources>
