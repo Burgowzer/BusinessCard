@@ -27,7 +27,7 @@ open class CardFragment : Fragment() {
             savedInstanceState: Bundle?
     ):View? {
 
-        //
+
 
 
         val root = inflater.inflate(R.layout.fragment_card, container, false)
