@@ -9,7 +9,11 @@
         android:id="@+id/navigation_cards"
         android:name="com.burgowzer.businesscard.ui.card.CardFragment"
         android:label="@string/title_card"
-        tools:layout="@layout/fragment_card" />
+        tools:layout="@layout/fragment_card" >
+        <action
+            android:id="@+id/action_navigation_cards_to_cardCreationFragment"
+            app:destination="@id/cardCreationFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_home"
@@ -22,4 +26,12 @@
         android:name="com.burgowzer.businesscard.ui.contact.ContactFragment"
         android:label="@string/title_contact"
         tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/cardCreationFragment"
+        android:name="com.burgowzer.businesscard.ui.card.CardCreationFragment"
+        android:label="CardCreationFragment" >
+        <action
+            android:id="@+id/action_cardCreationFragment_to_navigation_cards"
+            app:destination="@id/navigation_cards" />
+    </fragment>
 </navigation>

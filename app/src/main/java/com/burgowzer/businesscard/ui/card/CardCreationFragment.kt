@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.burgowzer.businesscard.Card
 import com.burgowzer.businesscard.CardManager
 import com.burgowzer.businesscard.MainActivity
@@ -60,8 +61,6 @@ class CardCreationFragment: Fragment(), CardManager.CardInformation {
 
 
 
-
-
             realm.beginTransaction()
             if (newCard != null) {
                 realm.copyToRealm(newCard)
@@ -94,15 +93,14 @@ class CardCreationFragment: Fragment(), CardManager.CardInformation {
 
         createCardButton
                 .setOnClickListener { loadCardList(cardViewModel)
-                        .also { finish()}
+                        .also { endCardCreationActivity()}
                 }
 
         discardCardButton
-                .setOnClickListener {
-                    val intent: Intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent) }
-    }
+                .setOnClickListener {endCardCreationActivity()}
     }
 
-
+    private fun endCardCreationActivity(){
+        findNavController().navigate(R.id.action_cardCreationFragment_to_navigation_cards)
+    }
 }
