@@ -51,8 +51,7 @@ open class CardFragment : Fragment() {
     }
 
     private fun startCardCreationActivity(){
-        val intent:Intent = Intent(this.context,CardCreationActivity::class.java)
-        startActivity(intent)
+
     }
 
 
