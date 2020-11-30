@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_card" >
         <action
             android:id="@+id/action_navigation_cards_to_cardCreationFragment"
-            app:destination="@id/cardCreationFragment" />
+            app:destination="@id/cardCreationFragment"
+            app:enterAnim="@anim/enter_card_creation" />
     </fragment>
 
     <fragment
@@ -26,12 +27,14 @@
         android:name="com.burgowzer.businesscard.ui.contact.ContactFragment"
         android:label="@string/title_contact"
         tools:layout="@layout/fragment_contact" />
+
     <fragment
         android:id="@+id/cardCreationFragment"
         android:name="com.burgowzer.businesscard.ui.card.CardCreationFragment"
         android:label="CardCreationFragment" >
         <action
             android:id="@+id/action_cardCreationFragment_to_navigation_cards"
-            app:destination="@id/navigation_cards" />
+            app:destination="@id/navigation_cards"
+            app:exitAnim="@anim/exit_card_creation" />
     </fragment>
 </navigation>
