@@ -16,17 +16,19 @@
         tools:layout_editor_absoluteX="191dp" />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
         android:id="@+id/button_add_card"
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/recyclerView"
         android:layout_marginTop="100dp"
+        app:icon="@drawable/ic_add_circle_white_48dp"
+        app:iconTint="@color/Green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/ic_add_circle_filled_white_48dp">
+        app:layout_constraintTop_toBottomOf="@id/recyclerView" />
 
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 
     <TextView
         android:id="@+id/textView"
