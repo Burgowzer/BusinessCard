@@ -9,7 +9,6 @@ import java.io.Serializable
 open class Card(var firstName:String?= null,
                 var lastName:String?= null,
                 var jobPosition:String?= null,
-                var companyName:String?= null,
                 var companyAddress:String?=null ,
                 var phoneNumber:String?=null,
                 var email:String?=null): RealmObject() {

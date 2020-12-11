@@ -14,4 +14,8 @@
     <string name="phone_number">Phone number</string>
     <string name="email">Email</string>
     <string name="no_card_available">Empty card repertory</string>
+    <string name="wallet">Wallet</string>
+    <string name="share">Share</string>
+    <string name="no_contact">No contact registered</string>
+
 </resources>

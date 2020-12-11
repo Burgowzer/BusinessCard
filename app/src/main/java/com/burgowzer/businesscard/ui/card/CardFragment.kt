@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.burgowzer.businesscard.R
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_card.*
@@ -21,7 +23,6 @@ open class CardFragment : Fragment() {
     val cardViewModel: CardViewModel by viewModels()
 
 
-
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -30,23 +31,12 @@ open class CardFragment : Fragment() {
 
 
 
-
         val root = inflater.inflate(R.layout.fragment_card, container, false)
 
-        val textView: TextView = root.findViewById(R.id.textView)
-/*
-        if (cardViewModel.cardList == null){
-            textView.text = getString(R.string.no_card_available) }
-         else{*/
 
-            cardViewModel.cardList?.observe(viewLifecycleOwner, {
-                adapter?.loadCardList(it)
-            })
-
-        cardViewModel.text.observe(viewLifecycleOwner, {
-            textView.text = it
+        cardViewModel.cardList?.observe(viewLifecycleOwner, Observer {
+            adapter?.loadCardList(it)
         })
-
 
         return root
     }
@@ -56,8 +46,10 @@ open class CardFragment : Fragment() {
 
         if(adapter?.adapterList != null){
             recyclerView.adapter = adapter
-            recyclerView.layoutManager = LinearLayoutManager(this.context)
+            recyclerView.layoutManager = LinearLayoutManager(this.context,LinearLayoutManager.HORIZONTAL ,false)
+            //recyclerView.addItemDecoration(DividerItemDecoration(this.context,DividerItemDecoration.HORIZONTAL))
         }
+        else empty_list.text = " No card registered"
     }
 
 

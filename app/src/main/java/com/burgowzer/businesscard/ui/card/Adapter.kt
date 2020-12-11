@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.burgowzer.businesscard.Card
 import com.burgowzer.businesscard.R
 import io.realm.RealmResults
-import kotlinx.android.synthetic.main.card_adapter.view.*
+import kotlinx.android.synthetic.main.activity_single_card.view.*
 
 class Adapter: RecyclerView.Adapter<Adapter.ViewHolder>() {
 
@@ -21,7 +21,7 @@ class Adapter: RecyclerView.Adapter<Adapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val root: View = LayoutInflater.from(parent.context).inflate(R.layout.card_adapter,parent,false)
+        val root: View = LayoutInflater.from(parent.context).inflate(R.layout.activity_single_card,parent,false)
 
         return ViewHolder(root)
     }

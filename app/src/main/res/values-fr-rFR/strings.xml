@@ -13,6 +13,9 @@
     <string name="job_position">Poste</string>
     <string name="phone_number">Numero de telephone</string>
     <string name="email">Email</string>
-    <string name="company_address">Adresse de l\'entreprise</string>
+    <string name="company_address">Adresse entreprise</string>
     <string name="no_card_available">Repertoire de cartes vide</string>
+    <string name="wallet">Portefeuille</string>
+    <string name="share">Transfert</string>
+    <string name="no_contact">Aucun contact</string>
 </resources>

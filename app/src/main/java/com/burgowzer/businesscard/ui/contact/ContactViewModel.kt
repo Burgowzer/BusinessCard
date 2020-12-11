@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class ContactViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
+        value = "No contact registered"
     }
     val text: LiveData<String> = _text
 }

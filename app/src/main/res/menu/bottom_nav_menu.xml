@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/navigation_contacts"
-        android:icon="@drawable/ic_contacts_white"
+        android:icon="@drawable/ic_perm_contact_calendar_white_24dp"
         android:title="@string/title_contact" />
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_nfc_2_white"
-        android:title="@string/title_home" />
+        android:icon="@drawable/ic_contactless_white_sharp_24dp"
+        android:title="@string/share" />
 
     <item
         android:id="@+id/navigation_cards"
-        android:icon="@drawable/ic_personal_card_white"
-        android:title="@string/title_card" />
+        android:icon="@drawable/ic_wallet_white_24dp"
+        android:title="@string/wallet" />
 
 </menu>
